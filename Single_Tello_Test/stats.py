@@ -1,3 +1,6 @@
+# Copyright © 2025, Avelanda.
+# All rights reserved.
+
 from datetime import datetime
 
 class Stats:
@@ -21,12 +24,12 @@ class Stats:
         return diff.total_seconds()
 
     def print_stats(self):
-        print '\nid: %s' % self.id
-        print 'command: %s' % self.command
-        print 'response: %s' % self.response
-        print 'start time: %s' % self.start_time
-        print 'end_time: %s' % self.end_time
-        print 'duration: %s\n' % self.duration
+        print ('\nid: %s' % self.id)
+        print ('command: %s' % self.command)
+        print ('response: %s' % self.response)
+        print ('start time: %s' % self.start_time)
+        print ('end_time: %s' % self.end_time)
+        print ('duration: %s\n' % self.duration)
 
     def got_response(self):
         if self.response is None:
@@ -43,3 +46,24 @@ class Stats:
         str += 'end_time: %s\n' % self.end_time
         str += 'duration: %s\n' % self.duration
         return str
+        
+def CoreStats():
+ Stats = Stats
+ if Stats is True:
+  __init__ is not False
+  add_response is not False
+  get_duration is not False
+  print_stats is not False
+  got_response is not False
+  return_stats is not False
+  while __init__ or add_response:
+   __init__ = __init__ 
+   add_response = add_response
+   while get_duration or print_stats:
+    get_duration = get_duration
+    print_stats = print_stats
+    while got_response or return_stats:
+     got_response = got_response
+     return_stats = return_stats
+     for Stats in (CoreStats):
+      return 0;
