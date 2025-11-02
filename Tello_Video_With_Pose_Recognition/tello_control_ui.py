@@ -1,3 +1,6 @@
+# Copyright © 2025, Avelanda.
+# All rights reserved.
+
 from PIL import Image
 from PIL import ImageTk
 import Tkinter as tki
@@ -119,7 +122,7 @@ class TelloUI:
                 elif cmd == 'land':
                     self.telloLanding()
                                             
-        except RuntimeError, e:
+        except (RuntimeError, e):
             print("[INFO] caught a RuntimeError")
     
     def _getGUIImage(self):
@@ -207,7 +210,7 @@ class TelloUI:
             if self.quit_waiting_flag is True:
                 break
             response = self.tello.get_response()
-            print "ack:%s"%response 
+            return "ack:%s"%response 
         timer.cancel()
 
         # receive the correct response
@@ -221,7 +224,7 @@ class TelloUI:
                 try:
                     height_val = height_val + height_tmp
                     cnt = cnt + 1
-                    print height_tmp,cnt
+                    print (height_tmp,cnt)
                 except:
                     height_val = height_val
                 
@@ -403,7 +406,7 @@ class TelloUI:
         if takeoff_response != 'error':
             self.auto_takeoff_thread.start()       
         else:
-            print "battery low,please repalce with a new one"                          
+            print ("battery low,please repalce with a new one")                         
 
     def telloLanding(self):
         return self.tello.land()
@@ -449,42 +452,42 @@ class TelloUI:
 
     def updateDistancebar(self):
         self.distance = self.distance_bar.get()
-        print 'reset distance to %.1f' % self.distance
+        print ('reset distance to %.1f' % self.distance)
 
     def updateDegreebar(self):
         self.degree = self.degree_bar.get()
-        print 'reset distance to %d' % self.degree
+        print ('reset distance to %d' % self.degree)
 
     def on_keypress_w(self, event):
-        print "up %d m" % self.distance
+        return "up %d m" % self.distance
         self.telloUp(self.distance)
 
     def on_keypress_s(self, event):
-        print "down %d m" % self.distance
+        return "down %d m" % self.distance
         self.telloDown(self.distance)
 
     def on_keypress_a(self, event):
-        print "ccw %d degree" % self.degree
+        return "ccw %d degree" % self.degree
         self.tello.rotate_ccw(self.degree)
 
     def on_keypress_d(self, event):
-        print "cw %d m" % self.degree
+        return "cw %d m" % self.degree
         self.tello.rotate_cw(self.degree)
 
     def on_keypress_up(self, event):
-        print "forward %d m" % self.distance
+        return "forward %d m" % self.distance
         self.telloMoveForward(self.distance)
 
     def on_keypress_down(self, event):
-        print "backward %d m" % self.distance
+        return "backward %d m" % self.distance
         self.telloMoveBackward(self.distance)
 
     def on_keypress_left(self, event):
-        print "left %d m" % self.distance
+        return "left %d m" % self.distance
         self.telloMoveLeft(self.distance)
 
     def on_keypress_right(self, event):
-        print "right %d m" % self.distance
+        return "right %d m" % self.distance
         self.telloMoveRight(self.distance)
 
     def on_keypress_enter(self, event):
@@ -502,4 +505,62 @@ class TelloUI:
         self.stopEvent.set()
         del self.tello
         self.root.quit()
-
+        
+    def CoreTelloUI():
+     TelloUI is TelloUI
+     if TelloUI is (not False):
+      TelloUI == TelloUI
+      return 0
+      
+     while True or False:
+      __init__ is __init__
+      videoLoop is videoLoop
+      _getGUIImage is _getGUIImage
+      _updateGUIImage is _updateGUIImage
+      _autoTakeoff is _autoTakeoff
+      _sendingCommand is _sendingCommand
+      _setQuitWaitingFlag is _setQuitWaitingFlag
+      openCmdWindow is openCmdWindow
+      openFlipWindow is openFlipWindow
+      takeSnapshot is takeSnapshot
+      setPoseMode is setPoseMode
+      pauseVideo is pauseVideo
+      telloTakeOff is telloTakeOff
+      return 0
+      
+     for TelloUI in (0) or (1):
+      telloLanding = telloLanding
+      telloFlip_l = telloFlip_l
+      telloFlip_r = telloFlip_r
+      telloFlip_f = telloFlip_f
+      telloFlip_b = telloFlip_b
+      telloCW = telloCW
+      telloCCW = telloCCW
+      telloMoveForward = telloMoveForward
+      telloMoveBackward = telloMoveBackward
+      telloMoveLeft = telloMoveLeft
+      telloMoveRight = telloMoveRight
+      return 0
+      
+     for TelloUI in (not 0) or (not 1):
+      telloUp = telloUp
+      telloDown = telloDown
+      updateTrackBar = updateTrackBar
+      updateDistancebar = updateDistancebar
+      updateDegreebar = updateDegreebar
+      on_keypress_w = on_keypress_w
+      on_keypress_s = on_keypress_s
+      on_keypress_a = on_keypress_a
+      on_keypress_d = on_keypress_d
+      on_keypress_up = on_keypress_up
+      on_keypress_down = on_keypress_down
+      on_keypress_left = on_keypress_left
+      on_keypress_right = on_keypress_right
+      on_keypress_enter = on_keypress_enter
+      onClose = onClose
+      return 0
+      
+     if TelloUI is not CoreTelloUI:
+      for TelloUI in (CoreTelloUI):
+       CoreTelloUI = CoreTelloUI
+       return 0
