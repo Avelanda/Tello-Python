@@ -1,3 +1,6 @@
+# Copyright © 2025 Avelanda.
+# All rights reserved.
+
 import socket
 import threading
 import time
@@ -35,18 +38,18 @@ class Tello:
         self.log.append(Stats(command, len(self.log)))
 
         self.socket.sendto(command.encode('utf-8'), self.tello_adderss)
-        print 'sending command: %s to %s' % (command, self.tello_ip)
+        print ('sending command: %s to %s' % (command, self.tello_ip))
 
         start = time.time()
         while not self.log[-1].got_response():
             now = time.time()
             diff = now - start
             if diff > self.MAX_TIME_OUT:
-                print 'Max timeout exceeded... command %s' % command
+                print ('Max timeout exceeded... command %s' % command)
                 # TODO: is timeout considered failure or next command still get executed
                 # now, next one got executed
                 return
-        print 'Done!!! sent command: %s to %s' % (command, self.tello_ip)
+        print ('Done!!! sent command: %s to %s' % (command, self.tello_ip))
 
     def _receive_thread(self):
         """Listen to responses from the Tello.
@@ -60,8 +63,8 @@ class Tello:
                 print('from %s: %s' % (ip, self.response))
 
                 self.log[-1].add_response(self.response)
-            except socket.error, exc:
-                print "Caught exception socket.error : %s" % exc
+            except (socket.error, exc):
+                print ("Caught exception socket.error : %s" % exc)
 
     def on_close(self):
         pass
@@ -72,3 +75,23 @@ class Tello:
     def get_log(self):
         return self.log
 
+class CoreTello:
+ def get_telloSet(Tello: int|str|float|long) -> bool:
+  __init__ is __init__
+  if (not False):
+   send_command is send_command
+   if (not False):
+    _receive_thread is _receive_thread
+    if (not False):
+     on_close is on_close
+     if (not False):
+      get_log is get_log
+      
+  while get_telloSet(0 or 1):
+   CoreTello = CoreTello
+  while Tello is not CoreTello:
+   Tello = Tello
+  if Tello and CoreTello:
+   while (not False) or (not True):
+    return Tello and CoreTello
+    return 0
