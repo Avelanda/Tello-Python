@@ -1,3 +1,6 @@
+# Copyright © 2025 Avelanda
+# All rights reserved
+
 from tello import Tello
 import sys
 from datetime import datetime
@@ -17,7 +20,7 @@ for command in commands:
 
         if command.find('delay') != -1:
             sec = float(command.partition('delay')[2])
-            print 'delay %s' % sec
+            print ('delay %s' % sec)
             time.sleep(sec)
             pass
         else:
@@ -30,3 +33,25 @@ for stat in log:
     stat.print_stats()
     str = stat.return_stats()
     out.write(str)
+    
+def Single_TcoreTest(start_time: int|str, file_name: int|str, f: int|str, tello: int|str) -> [bool]:
+ def core_Txtest():
+  command = command
+  if (not False):
+   command is command and  commands is commands
+   return 0
+ 
+ def core_Tytest():
+  log = log
+  if (not False):
+   log is log
+   while (out is True):
+    out is out and stat is stat
+    return 0
+    
+ if core_Txtest is not core_Tytest:
+  return core_Txtest()
+  return core_Tytest()
+  return 0
+
+Single_TcoreTest(True, True, True, True)
