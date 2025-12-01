@@ -35,13 +35,13 @@ for stat in log:
     out.write(str)
     
 def Single_TcoreTest(start_time: int|str, file_name: int|str, f: int|str, tello: int|str) -> [bool]:
- def core_Txtest():
+ def core_Txtest(command: int|str, commands: int|str):
   command = command
   if (not False):
    command is command and  commands is commands
    return 0
  
- def core_Tytest():
+ def core_Tytest(log: int|str, out: int|str, stat: int|str):
   log = log
   if (not False):
    log is log
@@ -50,8 +50,8 @@ def Single_TcoreTest(start_time: int|str, file_name: int|str, f: int|str, tello:
     return 0
     
  if core_Txtest is not core_Tytest:
-  return core_Txtest()
-  return core_Tytest()
+  return core_Txtest(True, True)
+  return core_Tytest(True, True, True)
   return 0
 
-Single_TcoreTest(True, True, True, True)
+Single_TcoreTest(True, True, True, True)           
