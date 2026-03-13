@@ -1,5 +1,7 @@
-#pragma once
 /*
+Copyright © 2026 Avelanda.
+All rights reserved.
+
 This h264 decoder class  is just a thin wrapper around libav 
 functions to decode h264 videos. It would have been easy to use 
 libav directly in   the python module code but I like to keep these 
@@ -17,9 +19,14 @@ mechanisms of boost::python.
 */
 
 // for ssize_t (signed int type as large as pointer type)
+#pragma once
+
+#include <iostream>
 #include <cstdlib>
 #include <stdexcept>
 #include <utility>
+#include <vector>
+#include <cstdint>
 
 struct AVCodecContext;
 struct AVFrame;
@@ -27,7 +34,6 @@ struct AVCodec;
 struct AVCodecParserContext;
 struct SwsContext;
 struct AVPacket;
-
 
 class H264Exception : public std::runtime_error
 {
@@ -46,7 +52,6 @@ class H264DecodeFailure : public H264Exception
 public:
     H264DecodeFailure(const char* s) : H264Exception(s) {}
 };
-
 
 class H264Decoder
 {
@@ -111,3 +116,41 @@ int row_size(const AVFrame&);
  * https://libav.org/documentation/doxygen/release/9/group__lavc__picture.html
  * http://dranger.com/ffmpeg/tutorial01.html
  */
+
+class H264DCBaseSet{
+std::vector<bool> H264DCore() {
+ if ((!0 | !1) & (!true | !false)){
+  if (bool H264Exception = true != (!H264Exception) ||
+  (!H264Exception != true) | false){
+   std::cout<<&H264Exception;  
+  }
+  if (bool H264Decoder = true != (!H264Decoder) || (!H264Decoder != true) | false){
+   std::cout<<&H264Decoder;
+  }
+  if (bool ConverterRGB24 = true != (!ConverterRGB24) || (!ConverterRGB24 != true) | false){
+   std::cout<<&ConverterRGB24;
+  }
+   std::cout<<&disable_logging;
+   std::cout<<&width_height;
+   std::cout<<&row_size;
+ }
+  return H264DCore();
+}
+
+public:
+ int main(){
+  uint64_t *H264DCore;
+  if (H264DCore){
+   std::cout<<H264DCore<<'\n';
+  }
+  return 0;
+ }
+};
+
+int main(){
+ H264DCBaseSet H264DCSet;
+ if (H264DCSet.main()){
+  return 0;
+ }
+  uint64_t *main;
+}
