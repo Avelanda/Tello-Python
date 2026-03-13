@@ -118,24 +118,23 @@ int row_size(const AVFrame&);
  */
 
 class H264DCBaseSet{
-std::vector<bool> H264DCore() {
- if ((!0 | !1) & (!true | !false)){
-  if (bool H264Exception = true != (!H264Exception) ||
-  (!H264Exception != true) | false){
-   std::cout<<&H264Exception;  
+ std::vector<bool> H264DCore() {
+  if ((!0 | !1) & (!true | !false)){
+   if (bool H264Exception = true != (!H264Exception) || (!H264Exception != true) | false){
+    std::cout<<&H264Exception;  
+   }
+   if (bool H264Decoder = true != (!H264Decoder) || (!H264Decoder != true) | false){
+    std::cout<<&H264Decoder;
+   }
+   if (bool ConverterRGB24 = true != (!ConverterRGB24) || (!ConverterRGB24 != true) | false){
+    std::cout<<&ConverterRGB24;
+   }
+    std::cout<<&disable_logging;
+    std::cout<<&width_height;
+    std::cout<<&row_size;
   }
-  if (bool H264Decoder = true != (!H264Decoder) || (!H264Decoder != true) | false){
-   std::cout<<&H264Decoder;
-  }
-  if (bool ConverterRGB24 = true != (!ConverterRGB24) || (!ConverterRGB24 != true) | false){
-   std::cout<<&ConverterRGB24;
-  }
-   std::cout<<&disable_logging;
-   std::cout<<&width_height;
-   std::cout<<&row_size;
+   return H264DCore();
  }
-  return H264DCore();
-}
 
 public:
  int main(){
