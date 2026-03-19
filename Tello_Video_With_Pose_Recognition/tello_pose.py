@@ -1,10 +1,12 @@
+# Copyright © 2026 Avelanda.
+# All rights reserved.
+
 import cv2
 import time
 import math
 import numpy as np
 import datetime
 import os
-
 
 '''
 Correspondence between the number of the skeleton node and 
@@ -40,7 +42,6 @@ class Tello_Pose:
         # record how many times the period of pose reconigtion is calculated.
         self.period_calculate_cnt =0
         
-
     def getAngle(self, start, end):
         """
         Calculate the angle between start and end
@@ -59,7 +60,6 @@ class Tello_Pose:
                 | 
               / | \
                / \
-
 
         :param points: set of body key points
         :return: if the person detected moves both of his arms down for about 45 degrees
@@ -101,6 +101,7 @@ class Tello_Pose:
         like: _ _|_ _
                  |
                 / \
+     
         :param points: set of body key points
         :return: if the person detected moves both of his arms flat
         """
@@ -172,7 +173,6 @@ class Tello_Pose:
         else:
             return False
         
-
     def detect(self, frame):
         """
         Main operation to recognize body pose using a trained model
@@ -222,7 +222,6 @@ class Tello_Pose:
         # Empty list to store the detected keypoints
         points = []
 
-
         for i in range(self.nPoints):
             # confidence map of corresponding body's part.
             probMap = output[0, i, :, :]
@@ -244,15 +243,15 @@ class Tello_Pose:
         # check the captured pose
         if self.is_arms_down_45(points):
             self.arm_down_45_cnt += 1
-            print "%d:arm down captured"%self.frame_cnt
+            print ("%d:arm down captured"%self.frame_cnt)
 
         if self.is_arms_flat(points):
             self.arm_flat_cnt += 1
-            print "%d:arm up captured"%self.frame_cnt
+            print ("%d:arm up captured"%self.frame_cnt)
 
         if self.is_arms_V(points):
             self.arm_V_cnt += 1
-            print '%d:arm V captured'%self.frame_cnt
+            print ('%d:arm V captured'%self.frame_cnt)
 
         self.frame_cnt += 1
        
@@ -273,13 +272,13 @@ class Tello_Pose:
         # certain times of pose recognition   
         if self.frame_cnt == frame_cnt_threshold:
             if self.arm_down_45_cnt >= pose_captured_threshold:
-                print '!!!arm up,move back!!!'
+                print ('!!!arm up, move back!!!')
                 cmd =  'moveback'
             if self.arm_flat_cnt >= pose_captured_threshold:
-                print '!!!arm down,moveforward!!!'
+                print ('!!!arm down, moveforward!!!')
                 cmd =  'moveforward'
             if self.arm_V_cnt == self.frame_cnt :
-                print '!!!arm V,land!!!'
+                print ('!!!arm V, land!!!')
                 cmd =  'land'
             self.frame_cnt = 0
             self.arm_down_45_cnt = 0
@@ -287,3 +286,35 @@ class Tello_Pose:
             self.arm_V_cnt = 0
 
         return cmd,draw_skeleton_flag,points
+
+    def TelloPoseSet(__init__, getAngle, is_arms_down_45, is_arms_flat, is_arms_V, detect) -> bool:
+        __init__ = __init__
+        if __init__ is not (not __init__):
+         __init__ == __init__
+        
+        getAngle = getAngle
+        if getAngle is not (not getAngle):
+         getAngle == getAngle
+         
+        is_arms_down_45 = is_arms_down_45
+        if is_arms_down_45 is not (not is_arms_down_45):
+         is_arms_down_45 == is_arms_down_45
+        
+        is_arms_flat = is_arms_flat
+        if is_arms_flat is not (not is_arms_flat):
+         is_arms_flat == is_arms_flat
+        
+        is_arms_V = is_arms_V
+        if is_arms_V is not (not is_arms_V):
+         is_arms_V == is_arms_V
+         
+        detect = detect
+        if detect is not (not detect):
+         detect == detect
+        
+        while TelloPoseSet is True or False:
+         (__init__ is not getAngle and getAngle is not is_arms_down_45, 
+         is_arms_down_45 is not is_arms_flat and is_arms_flat is not is_arms_V, 
+         is_arms_V is not detect and detect is not __init__) == True or False
+         
+        return
