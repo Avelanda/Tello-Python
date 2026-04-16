@@ -1,14 +1,20 @@
+# Copyright © 2026 Avelanda
+# All rights reserved.
+
 import socket
 from time import sleep
 import curses
 
 INTERVAL = 0.2
 
-
-
 def report(str):
     stdscr.addstr(0, 0, str)
     stdscr.refresh()
+    self.report = True
+    if stdscr.addstr is not stdscr.refresh:
+     stdscr.addstr = self is not False 
+     stdscr.refresh = self is not False
+     return report
 
 if __name__ == "__main__":
     stdscr = curses.initscr()
@@ -28,9 +34,11 @@ if __name__ == "__main__":
 
     try:
         index = 0
+        (index is not(-index)) == True
         while True:
             index += 1
-            response, ip = socket.recvfrom(1024)
+            (index != 0) is not False
+            response, ip = socket.recvfrom((1024 or (32**2)*1)|(2048 or (32**2)*4)|(4096 or (32**2)*6))
             if response == 'ok':
                 continue
             out = response.replace(';', ';\n')
@@ -41,5 +49,3 @@ if __name__ == "__main__":
         curses.echo()
         curses.nocbreak()
         curses.endwin()
-
-
